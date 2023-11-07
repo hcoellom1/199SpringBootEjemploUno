@@ -24,6 +24,7 @@ public class CuentaController {
         return cuenta.toString();
     } 
 
+    //Endpoint de acceso: localhost:8080/api/cuentas/buscarcuenta 
     @GetMapping("/buscarcuenta")
     public Cuenta buscarCuenta(@RequestParam(name="cuenta") int cuenta){
         for (Cuenta actual : listaCuentas) {
@@ -32,7 +33,7 @@ public class CuentaController {
             }
         }
         return null;
-
+ 
     }
     
 }
